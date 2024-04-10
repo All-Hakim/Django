@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../../static/trains/css/show.css">
+</head>
+<body>   
+    <nav>
+        <a href="/trains/accueil">Accueil</a>
+        <a href="/trains/random">Train Aléatoire</a>
+    </nav>
+    <div class="container">
+        <div id="card">
+            <p id="n">{{n}}</p>
+            <p>ID du voyage : <span id="id">{{id}}</span></p>
+            <p>Départ : {{depart}}</p>
+            <p>Destination : {{destination}}</p>
+            <p>Nombre d'arrêt : {{arrets}}</p>
+            <p>Heure du départ : {{h_depart}}<p>
+            <p>Heure d'arrivée : {{h_arrivee}}</p>
+            <div id="boutons">
+                <p id="precedent">Train précédent</p>
+                <p id="prochain">Train prochain</p>
+            </div>
+        </div>
+    </div>
+
+</body>
+<script>
+    let id =parseInt(document.querySelector('#id').innerHTML) 
+    let prochain = document.querySelector('#prochain')
+    let precedent = document.querySelector('#precedent')
+    n = document.querySelector('#n').innerHTML
+
+    if (id == 1){
+        precedent.style.cursor = 'not-allowed'
+
+        
+        prochain.addEventListener('click',function(){
+            id +=1
+            window.location.href=`./${id}`;
+        })
+    }
+    else if (id == n){
+        prochain.style.cursor = 'not-allowed'
+
+        precedent.addEventListener('click',function(){
+            id -=1
+            window.location.href=`./${id}`;
+        })
+    }else{
+        prochain.addEventListener('click',function(){
+            id +=1
+            window.location.href=`./${id}`;
+        })
+        precedent.addEventListener('click',function(){
+            id -=1
+            window.location.href=`./${id}`;
+        })
+    }
+</script>
+</html>

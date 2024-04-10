@@ -1,0 +1,63 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="../../static/trains/css/acceuil.css">
+</head>
+<body>
+    <nav>
+        <img src="{%static 'trains/img/TO.png' %}" alt="">
+        <ul>
+            <li><a href="#">Acceuil</a></li>
+            <li><a href="/trains/random">Train aléatoire</a></li>
+            <li><a href="/trains/create">Ajouter</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section class="accueil">
+            <div id="text">
+                <h1> Bienvenue dans le site officiel de la gare de Tizi-Ouzou</h1>
+                <h2>Les trains et les horraires</h2>
+            </div>
+            <h1 id="fleche"> &darr; </h1>
+        </section>
+        <div id="trains">
+            <h1>Trains et Horaires:</h1>
+            <p>Nombre de voyages d'aujourd'hui : {{n}}</p>
+            <table>
+                <tr>
+                    <th>id</th>
+                    <th>Destination</th>
+                    <th>Heure de départ</th>
+                    <th>informations</th>
+                </tr>
+                {% for i in trains %}                
+                <tr>
+                    <td>{{i.id}}</td>
+                    <td>{{i.destination}}</td>
+                    <td>{{i.h_depart}}</td>
+                    <td><a href="./show/{{i.id}}">Show</a></td>
+        
+                </tr>
+                {% endfor %}
+                
+            </table>
+        </div>
+    </main>
+</body>
+<script>
+    let down = document.querySelector('#fleche')
+    let a = document.querySelector('#trains')
+
+    down.addEventListener('click', function(){
+        window.scrollTo({
+        top:a.offsetTop,
+        behavior : "smooth"
+    })
+    })
+</script>
+</html>

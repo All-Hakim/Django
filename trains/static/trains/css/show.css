@@ -1,0 +1,73 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+    background-image: url(../img/show.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+}
+
+nav{
+    display: flex;
+    gap: 5rem;
+    padding: 2% 5%;
+    background-color: rgba(255, 255, 255,0.5);
+    backdrop-filter: blur(3px);
+}
+nav a{
+    text-decoration: none;
+    color: #fff;
+    background-color: rgb(0, 0, 0, 0.8);
+    padding: 0.3rem 0.5rem;
+    border-radius: 20px;
+    border: transparent solid 2px;
+
+    transition: 0.4s;
+}
+nav a:hover{
+    color: black;
+    background-color: transparent;
+    border: black solid 2px;
+}
+.container{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#card{
+    color : black;
+    background-color: rgba(255, 255, 255,0.5);
+    backdrop-filter: blur(3px);
+    padding: 1rem 3rem;
+    border-radius: 20px;
+}
+#n{
+    display: none;
+}
+#card p{
+    margin-block: 1rem;
+}
+#boutons{
+    display: flex;
+    gap: 1rem;
+}
+#boutons p{
+    color: #fff;
+    background-color: rgb(0, 0, 0, 0.8);
+    padding: 0.3rem 0.5rem;
+    border-radius: 20px;
+    border: transparent solid 2px;
+    transition: 0.4s;
+}
+#boutons p:hover{
+    cursor: pointer;
+    color: black;
+    background-color: transparent;
+    border: black solid 2px;
+}

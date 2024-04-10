@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="../../static/trains/css/create.css">
+</head>
+<body>
+    <div class="card">
+        <!-- <h1>Ajoutez un Train</h1>
+        <form action="">
+            <label for="id">ID :</label>
+            <input type="number">
+    
+            <label for="destination">Déstination :</label>
+            <input id="destination" type="text">
+    
+            <label for="depart">Départ :</label>
+            <input id="depart" type="text">
+    
+            <label for="arrets">Nombre d'arrêts :</label>
+            <input id="arrets" type="number">
+    
+            <label for="h_depart">Heure du départ</label>
+            <input id="h_depart" type="text"> 
+    
+            <label for="h_arrivee">Heure d'arrivée</label>
+            <input id="h_arrivee" type="text"> 
+    
+            <div class="btn">
+
+                <input id="btn" type="submit" value="Ajouter">
+            </div>
+        </form> -->
+
+        <h1>Formulaire de Trains</h1>
+        <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}  
+            <div class="btn">
+                <button id="btn" type="submit">Ajouter</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
