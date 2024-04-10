@@ -26,26 +26,22 @@
             <h1 id="fleche"> &darr; </h1>
         </section>
         <div id="trains">
-            <h1>Trains et Horaires:</h1>
+            <h1 id="t">Trains et Horaires:</h1>
             <p>Nombre de voyages d'aujourd'hui : {{n}}</p>
-            <table>
-                <tr>
-                    <th>id</th>
-                    <th>Destination</th>
-                    <th>Heure de départ</th>
-                    <th>informations</th>
-                </tr>
+
+
+            <div class="cards">
+
                 {% for i in trains %}                
-                <tr>
-                    <td>{{i.id}}</td>
-                    <td>{{i.destination}}</td>
-                    <td>{{i.h_depart}}</td>
-                    <td><a href="./show/{{i.id}}">Show</a></td>
-        
-                </tr>
+                    <div class="card">
+                        <h1>{{i.destination}}</h1>
+                        <p>{{i.h_depart}}</p>
+                        <a href="./show/{{i.id}}"> voir</a>
+                    </div>
                 {% endfor %}
+            </div>
                 
-            </table>
+
         </div>
     </main>
 </body>

@@ -73,38 +73,47 @@ nav ul li a:hover{
     background-color: #fff;
     padding: 2% 5%;
 }
-#trains h1{
+#t{
     text-align: center;
     color: #000065;
 }
 
-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin: 20px 0;
+.cards{
+    padding: 3rem 5%  ;
+    display: flex;
+    gap: 5rem 10rem;
+    flex-wrap: wrap;
 }
-th, td {
-    border: 1px solid #ddd;
-    padding: 8px;
-    text-align: left;
-}
-th {
-    background-color: #000065;
-    color: white;
-}
-tr{
-    transition: 0.5s;
-}
-tr:hover {
-    background-color: #000065;
+.card{
     color: #fff;
+    width: 200px;
+    text-align: center;
+    border-radius: 20px;
+    background-color: #000065;
+    border: #000065 solid 2px;
+    padding : 0.5rem
 }
-tr:hover a{
-    color:#fff;
-    text-decoration: underline;
+.card p{
+    margin: 1rem 0 3rem 0;
 }
-a {
-    text-decoration: none;
+.card h1{
+    background-color: white;
     color: #000065;
-    transition: 0.5s;
+    border-radius: 20px;
+}
+.card a{
+    color: #000065;
+    text-decoration: none;
+    background-color: #fff;
+    padding: 0.3rem 0.5rem;
+    border-radius: 20px;
+    border: transparent solid 2px;
+
+    transition: 0.4s;
+}
+.card a:hover{
+    color: #fff;
+    background-color: #000065;
+    border: #fff solid 2px;
+
 }
